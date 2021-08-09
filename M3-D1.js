@@ -30,12 +30,29 @@ console.log(checkNumber(40, 20))
 Create a function to remove a character at the specified position of a given string and return the new string.
 */
 
+const removeChart = (str) => {
+    return str.substring(1, 4)
+}
+
+console.log(removeChart("Hello"))
 /*
 
 4)
  Create a function to find the largest of three given integers.
 */
 
+const findLargest = (num1, num2, num3) => {
+    if (num1 > num2 && num1 > num3) {
+        return num1;
+    } else if (num2 > num1 && num2 > num3) {
+        return num2
+    } else {
+        return num3
+    }
+
+}
+
+console.log(findLargest(0, 12, 30))
 /*
 5)
 Create a function to check whether two numbers are in range 40..60 or in the range 70..100 inclusive.
