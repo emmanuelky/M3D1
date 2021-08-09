@@ -149,26 +149,81 @@ console.log(findLongeststr(["whatever", "mango", "pineapple"]))
 //     btuse angle: An angle between 90 and 180 degrees.
 //     Straight angle: A 180 degree angle.
 
+
+const findAngle = (angle) => {
+    if (angle >= 0 && angle < 90) {
+        return "This is an Acute Angle"
+    } else if (angle === 90) {
+        return "Right Angle"
+    } else if (angle >= 90 && angle <= 180) {
+        return "Obtuse Angle"
+    }
+    return "Straight Angle"
+}
+
+console.log(findAngle(90))
+
 // 13)
 
 // Create a function to find the index of the greatest element of a given array of integers
 
+const findIndexOfElement = (arr) => {
+    return arr.indexOf(Math.max(...arr))
+}
+
+console.log(findIndexOfElement([2, 9, 14, 60, 120, 500]))
 // 14)
 
 // Create a function to get the largest even number from an array of integers.
 
+const largestEvenNum = (arr) => {
+    arr.sort((a, b) => b - a)
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            return arr[i]
+        }
+    }
+}
+
+console.log(largestEvenNum([2, 30, 7, 5, 6, 20]))
 // 16)
 
 // Create a function to check from two given integers, whether one is positive and another one is negative.
 
+const positiveOrNegative = (num1, num2) => {
+    return ((num1 < 0 && num2 > 0) || num1 > 0 && num2 < 0) ? true : false
+
+}
+
+console.log(positiveOrNegative(3, -8))
 // 17)
 
 // Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case.
 
+const strLowerAndUpperCase = (str) => {
+    if (str.length < 3) {
+        return str.toUpperCase();
+    }
+
+    firstLetters = (str.substring(0, 3)).toLowerCase();
+    lastLetters = str.substring(3, str.length);
+    return firstLetters + lastLetters;
+}
+
+console.log(strLowerAndUpperCase("strive"))
 // 18)
 
 // Create a function to calculate the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.
 
+const sumOfInt = (num1, num2) => {
+    let sum = num1 + num2
+
+    return (sum >= 50 && sum <= 80) ? 65 : 80
+
+}
+
+console.log(sumOfInt(30, 19))
 // 19)
 
 // Create a function to convert a number to a string, the contents of which depend on the number's factors. Follow next example:
