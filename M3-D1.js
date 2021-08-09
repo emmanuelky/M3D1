@@ -3,12 +3,28 @@
 1)
 Create a function to calculate the sum of the two given integers. If the two values are same, then returns triple their sum.
 */
+const sum = (a, b) => {
+    if (a === b) {
+        return (a + b) * 3
+    } else {
+        return a + b
+    }
+}
+console.log(sum(2, 4))
+console.log(sum(2, 2))
+
 
 /*
 2)
 Create a function to check two given numbers and return true if one of the number is 50 or if their sum is 50.
 */
 
+const checkNumber = (num1, num2) => {
+    let numSum = num1 + num2
+    return (num1 === 50 || num2 === 50 || numSum === 50) ? true : false
+}
+
+console.log(checkNumber(40, 20))
 /*
 3)
 Create a function to remove a character at the specified position of a given string and return the new string.
@@ -26,7 +42,7 @@ Create a function to check whether two numbers are in range 40..60 or in the ran
 */
 
 /*
-6) 
+6)
 
 Create a function to create a new string of specified copies (positive number) of a given string.
 */
@@ -45,7 +61,7 @@ Create a function to calculate the sum of three elements of a given array of int
 /*
 
 9)
-Create a function to test whether an array of integers of length 2 contains 1 or a 3. 
+Create a function to test whether an array of integers of length 2 contains 1 or a 3.
 */
 
 /*
@@ -82,7 +98,7 @@ Create a function to check from two given integers, whether one is positive and 
 
 17)
 
-Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case. 
+Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case.
 
 18)
 
