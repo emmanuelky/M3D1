@@ -8,6 +8,32 @@ commonly used in the string.
     maxChar("apple 1231111") === "1"
 */
 
+const maxChar = (str) => {
+    let strCount = 0;
+    let maxWord = "";
+
+    for (let i = 0; i < str.length; i++) {
+        str.split("").map(word => {
+            if (str.split(word).length > strCount) {
+                strCount = str.split(word).length;
+                maxWord = word
+            }
+        })
+        return maxWord;
+    }
+
+    // str.split("").forEach((char) => {
+    //     if (str.split(char).length > max) {
+    //         max = str.split(char).length;
+    //         maxChar = char;
+    //     }
+    // });
+    // return maxChar;
+}
+
+console.log(maxChar("wwwwuuuuuuyytttttttttt"))
+
+
 /* 2) ANAGRAMS
 
 Check to see if two provided strings are anagrams of each other.
@@ -25,7 +51,7 @@ or punctuation.  Consider capital letters to be the same as lower case
 
 Given a word and a list of possible anagrams, select the correct sublist.
 
---- Examples 
+--- Examples
 
     "listen" and a list of candidates like "enlists" "google" "inlets" "banana" the program should return a list containing "inlets".
 */

@@ -202,13 +202,9 @@ console.log(positiveOrNegative(3, -8))
 // Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case.
 
 const strLowerAndUpperCase = (str) => {
-    if (str.length < 3) {
-        return str.toUpperCase();
-    }
-
-    firstLetters = (str.substring(0, 3)).toLowerCase();
-    lastLetters = str.substring(3, str.length);
-    return firstLetters + lastLetters;
+    str.length < 3
+        ? str.toUpperCase()
+        : str.slice(0, 3).toLowerCase() + str.slice(3).toUpperCase();
 }
 
 console.log(strLowerAndUpperCase("strive"))
@@ -240,7 +236,28 @@ console.log(sumOfInt(30, 19))
 // 34 has four factors: 1, 2, 17, and 34.
 // this would be "34".
 
+
+const numToStringByFactor = (num) => {
+    let str = "";
+    if (num % 3 === 0) str += "Diego";
+    if (num % 5 === 0) str += "Riccardo";
+    if (num % 7 === 0) str += "Stefano";
+
+    return str;
+
+}
+
+console.log(numToStringByFactor(2))
+
 // 20)
 // Create a function that given a phrase returns its acronym, like British Broadcasting Corporation returns BBC
 
+const acronym = (str) => {
+    return str
+        .split(" ")
+        .map((word) => word.charAt(0).toUpperCase())
+        .join("")
+
+}
+console.log(acronym("What thanks follows"))
 // */
